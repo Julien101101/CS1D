@@ -107,7 +107,16 @@ void toLower(string &str)
 // ====================================================
 // ====================================================
 // Output
-/*
+/*This is my palindrome program. It runs. It first
+  prompts us to enter a string. We can then exit by
+  writing N or n. A little different but not too much.
+  Finding a way to make the program case insentive
+  was tough but I found a way by creating multiple
+  functions which do their own seperate work. No global
+  variables were used and the program does not seem to
+  bug as much as when I used fgets.
+  I hope you enjoy my program.
+    Thank you.
 Enter a string: Racecar
 The string is a palindrome.
 Do you want to continue? (y/n): y
@@ -134,7 +143,6 @@ The string is not a palindrome.
 Do you want to continue? (y/n): Y
 Enter a string: RAdar
 The string is a palindrome.
-Do you want to continue? (y/n): N
-*/
+Do you want to continue? (y/n): N *
 // ====================================================
 // ====================================================
