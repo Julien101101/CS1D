@@ -10,38 +10,38 @@
  * ADT implemented priority queue
  ************************************************************************/
 template <typename C, typename T>
-class PriorityQueue {
+class PriorityQueue
+{
 private:
-
-list<T> queue;
+	list<T> queue;
 
 public:
-PriorityQueue();
-int size() const; // number of elements
-bool empty() const; // is the queue empty?
-void insert(const C& n, const T& i); // insert element
-void insertCrit(const C& n, const T& i); // insert critical patient
-const T& front(); // first element
-void dequeue();
+	PriorityQueue();
+	int size() const;						 // number of elements
+	bool empty() const;						 // is the queue empty?
+	void insert(const C &n, const T &i);	 // insert element
+	void insertCrit(const C &n, const T &i); // insert critical patient
+	const T &front();						 // first element
+	void dequeue();
 };
 
 // Returns the size of the queue
 template <typename C, typename T>
-PriorityQueue<C,T>::PriorityQueue()
+PriorityQueue<C, T>::PriorityQueue()
 {
 	queue.size();
 }
 
 // Returns if the queue is empty or not
 template <typename C, typename T>
-bool PriorityQueue<C,T>::empty() const
+bool PriorityQueue<C, T>::empty() const
 {
 	return queue.empty();
 }
 
 // Inserts a new item in to the queue
 template <typename C, typename T>
-void PriorityQueue<C,T>::insert(const C& n, const T& i)
+void PriorityQueue<C, T>::insert(const C &n, const T &i)
 {
 	queue.push_back(i);
 	queue.sort();
@@ -50,24 +50,23 @@ void PriorityQueue<C,T>::insert(const C& n, const T& i)
 
 // Inserts a critical patient in to the queue
 template <typename C, typename T>
-void PriorityQueue<C,T>::insertCrit(const C& n, const T& i)
+void PriorityQueue<C, T>::insertCrit(const C &n, const T &i)
 {
 	queue.push_front(i);
 }
 
 // Returns the item at the front of the queue
 template <typename C, typename T>
-const T& PriorityQueue<C,T>::front()
+const T &PriorityQueue<C, T>::front()
 {
 	return queue.front();
 }
 
 // Pops the item that is on top of the queue
 template <typename C, typename T>
-void PriorityQueue<C,T>::dequeue()
+void PriorityQueue<C, T>::dequeue()
 {
 	queue.pop_front();
 }
-
 
 #endif /* PRIORITYQUEUE_H_ */
